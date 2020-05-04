@@ -81,6 +81,7 @@ function build(plugin) {
       .then(() => console.log(`Building ${plugin} plugin... Done!`))
       .catch((err) => console.error(`${plugin}: ${err}`))
   })
+    .catch((error) => console.error(`${plugin}: ${error}`))
 }
 
 Object.keys(bsPlugins).forEach((plugin) => build(plugin))
